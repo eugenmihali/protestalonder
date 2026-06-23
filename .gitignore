@@ -1,0 +1,7 @@
+# Full-size original photos: kept locally as your backup, NOT served on the web.
+# The web-optimized copies live in assets/photos/ (those ARE committed).
+gallery/
+
+# Python
+__pycache__/
+*.pyc
