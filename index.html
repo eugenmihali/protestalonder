@@ -47,6 +47,28 @@
       max-width: 42ch;
     }
 
+    .wiki-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid #d9c2c8;
+      border-radius: 999px;
+      background: #fff;
+      color: #3a3a3a;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(201, 24, 74, 0.08);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .wiki-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(201, 24, 74, 0.15);
+    }
+    .wiki-link svg { width: 20px; height: 20px; fill: #202122; }
+
     /* === SOCIAL LINKS = the main event === */
     .socials {
       display: flex;
@@ -176,6 +198,10 @@
   </svg>
 
   <h1>Flamingo Revolution</h1>
+  <a class="wiki-link" href="https://en.wikipedia.org/wiki/Flamingo_Revolution" target="_blank" rel="noopener" aria-label="Read about the Flamingo Revolution on Wikipedia">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.09 13.119c-.936 1.932-2.217 4.548-2.853 5.728-.616 1.074-1.127.931-1.532.029-1.406-3.321-4.293-9.144-5.651-12.409-.251-.601-.441-.987-.619-1.139-.181-.15-.554-.24-1.122-.271C.103 5.033 0 4.982 0 4.898v-.455l.052-.045c.924-.005 5.401 0 5.401 0l.051.045v.434c0 .119-.075.176-.225.176l-.564.031c-.485.029-.727.164-.727.436 0 .135.053.33.166.601 1.082 2.646 4.818 10.521 4.818 10.521l.136.046 2.411-4.81-.482-1.067-1.658-3.264s-.318-.654-.428-.872c-.728-1.443-.712-1.518-1.447-1.617-.207-.023-.313-.05-.313-.149v-.468l.06-.045h4.292l.113.037v.451c0 .105-.076.15-.227.15l-.308.047c-.792.061-.661.381-.136 1.422l1.582 3.252 1.758-3.504c.293-.64.233-.801.111-.918-.07-.067-.439-.103-.768-.103-.157 0-.247-.05-.247-.16v-.453l.05-.045c1.235-.009 4.014 0 4.014 0l.051.045v.451c0 .105-.075.151-.227.151l-.376.037c-.685.094-.7.327-1.227 1.318l-3.071 6.108L18.13 19.05l.181.061c1.137-2.43 4.553-9.717 5.557-11.875.234-.503.358-.792.358-1.054 0-.124-.061-.171-.21-.171l-.553-.031c-.151 0-.227-.057-.227-.176v-.434l.052-.045s3.012-.005 3.012 0l.052.045v.455c0 .084-.103.135-.225.16-.568.031-.941.121-1.122.271-.178.152-.368.538-.619 1.139-1.358 3.265-4.245 9.088-5.651 12.409-.405.902-.916 1.045-1.532-.029-.636-1.18-1.917-3.796-2.853-5.728z"/></svg>
+    <span>Wikipedia</span>
+  </a>
   <p class="tagline">Follow us and join the flock. 🦩 Connect with us on social media below.</p>
 
   <!-- SOCIAL LINKS — replace the # with your real profile URLs when you have them -->
