@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protestalonder</title>
+  <style>
+    :root {
+      --flamingo: #fb6f92;
+      --flamingo-deep: #c9184a;
+      --bg: #fff0f3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at 50% 20%, #ffffff 0%, var(--bg) 70%);
+      color: #4a3036;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .flamingo {
+      width: 180px;
+      height: auto;
+      filter: drop-shadow(0 12px 20px rgba(201, 24, 74, 0.25));
+      animation: bob 3s ease-in-out infinite;
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50%      { transform: translateY(-14px) rotate(2deg); }
+    }
+
+    h1 {
+      margin-top: 1.25rem;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: var(--flamingo-deep);
+    }
+    .tagline {
+      margin-top: 0.5rem;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: #6b4a52;
+      max-width: 40ch;
+    }
+
+    /* Picture gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      max-width: 800px;
+    }
+    .gallery img {
+      width: 220px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 8px 18px rgba(201, 24, 74, 0.15);
+    }
+    /* Placeholder look until you drop in real photos */
+    .gallery .placeholder {
+      width: 220px;
+      height: 160px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffd9e0;
+      color: #c9184a;
+      font-size: 0.9rem;
+      border: 2px dashed #fb6f92;
+    }
+
+    /* Social links */
+    .socials {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .socials a {
+      color: var(--flamingo-deep);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .socials a:hover { border-color: var(--flamingo-deep); }
+
+    footer { margin-top: auto; padding-top: 3rem; font-size: 0.85rem; color: #b08a92; }
+  </style>
+</head>
+<body>
+  <!-- A simple flamingo drawn in SVG so it works offline, with no external images -->
+  <svg class="flamingo" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flamingo">
+    <line x1="92" y1="170" x2="86" y2="250" stroke="#f48fb1" stroke-width="6" stroke-linecap="round"/>
+    <line x1="108" y1="170" x2="118" y2="250" stroke="#f48fb1" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="100" cy="150" rx="50" ry="40" fill="#fb6f92"/>
+    <path d="M140 140 q35 -5 50 15 q-30 5 -50 0 z" fill="#fb6f92"/>
+    <path d="M70 140 q-20 -60 25 -90 q15 -10 25 0 q-30 5 -35 35 q-5 35 0 60 z" fill="#fb6f92"/>
+    <circle cx="118" cy="48" r="18" fill="#fb6f92"/>
+    <circle cx="124" cy="44" r="3" fill="#3a1f24"/>
+    <path d="M132 50 l24 8 l-22 8 q-6 -8 -2 -16 z" fill="#3a1f24"/>
+  </svg>
+
+  <h1>Protestalonder</h1>
+  <p class="tagline">Coming soon. For now, enjoy this flamingo standing on one leg. 🦩</p>
+
+  <!-- PICTURES:
+       Put your image files in an "images" folder next to this file, then
+       replace a placeholder div with: <img src="images/your-photo.jpg" alt="description" /> -->
+  <div class="gallery">
+    <div class="placeholder">Photo 1 goes here</div>
+    <div class="placeholder">Photo 2 goes here</div>
+    <div class="placeholder">Photo 3 goes here</div>
+  </div>
+
+  <!-- SOCIAL LINKS:
+       Replace the # with your real profile URLs. Delete any you don't use. -->
+  <nav class="socials">
+    <a href="#" target="_blank" rel="noopener">Instagram</a>
+    <a href="#" target="_blank" rel="noopener">TikTok</a>
+    <a href="#" target="_blank" rel="noopener">X</a>
+    <a href="#" target="_blank" rel="noopener">YouTube</a>
+  </nav>
+
+  <footer>© <span id="year"></span> Protestalonder</footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
