@@ -244,7 +244,7 @@
       const lbImg = document.getElementById("lightboxImg");
       const base = "assets/photos/";
 
-      fetch(base + "manifest.json")
+      fetch(base + "manifest.json?v=" + Date.now())
         .then(r => r.json())
         .then(list => {
           list.forEach((name, i) => {
